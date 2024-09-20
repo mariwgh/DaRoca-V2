@@ -2,8 +2,9 @@
 
 ## 🧑‍🎓 Integrantes
 
-* Integrante 1
-* Integrante 2
+* Eduarda Yaclara
+* João Lustosa Cordeiro
+* Mariana Marietti da Costa
 
 ## 📝 Descrição
 
