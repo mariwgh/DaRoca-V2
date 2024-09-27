@@ -8,10 +8,13 @@
 
 ## 📝 Descrição
 
-## Paleta de Cores
+## Paleta
 - Bege: FFFBE4
 - Verde: 013C31
 - Laranja: EFC199
+- Laranja forte: FE740D
+
+- Fonte: Special Elite
 
 ## 🗃 Histórico de lançamentos
 
