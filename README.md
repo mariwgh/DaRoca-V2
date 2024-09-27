@@ -1,27 +1,26 @@
-## Projeto 2 de TI129 - Prática Profissional I
+# Projeto 2 de TI129 - Prática Profissional I
 
-## 🧑‍🎓 Integrantes
+## Integrantes
 
-* Eduarda Yaclara
+* Eduarda Yaclara de Souza Maumezzo
 * João Lustosa Cordeiro
 * Mariana Marietti da Costa
 
-## 📝 Descrição
+## Descrição
 
-## Paleta
-- Bege: FFFBE4
-- Verde: 013C31
-- Laranja: EFC199
-- Laranja forte: FE740D
+  ### Paleta
+  - Bege: FFFBE4
+  - Verde: 013C31
+  - Laranja: EFC199
+  - Laranja forte: FE740D
+  - Fonte: Special Elite
 
-- Fonte: Special Elite
-
-## 🗃 Histórico de lançamentos
+## Histórico de lançamentos
 
 Versão    | Data       | O que há de novo
 --------- | ---------  | ---------
 1.0       | 30/08/2024 | 
 
-## 📋 Licença
+## Licença
 
 Este projeto utiliza a licença [MIT](https://opensource.org/license/mit).
