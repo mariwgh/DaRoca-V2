@@ -1,10 +1,61 @@
 body {
     background-color: #013C31;
-    margin: 0;
     font-family: 'Special Elite', sans-serif;;
 }
 
-footer{
+input, select {
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin: 40px;
+}
+
+#filtros {
+    text-align: center;
+}
+
+table, tr, th, td {
+    background-color: #ebeae8;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table {
+    border-radius: 10px;
+    overflow: hidden; 
+    margin: auto;
+}
+
+td:nth-child(odd), th:nth-child(odd) {
+    background-color: #d3d3d3;
+}
+
+footer :not(img) {
     background-color: #FFFBE4;
     padding: 10px;
+    margin-top: 40px;
+    height: 60px;
+    width: 100%;
+}
+
+#imgMais {
+    width: 4%;
+    margin-left: 90%;
+    border: 2px solid black;
+    border-radius: 100px;
+
+    /* sombra do button */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.3s ease; 
+}
+
+#butaoAdd {
+    transition: 0.3s;
+}
+
+#butaoAdd :hover {
+    transform: scale(1.1);
 }
