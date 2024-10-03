@@ -6,7 +6,7 @@
 * João Lustosa Cordeiro
 * Mariana Marietti da Costa
 
-## Kit de Marca
+## Guia de Marca
   - Bege: FFFBE4
   - Verde: 013C31
   - Laranja: EFC199
