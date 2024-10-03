@@ -1,6 +1,16 @@
 body {
     background-color: #013C31;
-    font-family: 'Special Elite', sans-serif;;
+    font-family: 'Special Elite', sans-serif;
+}
+
+#logo {
+    width: 9%;
+    margin-left: 15px;
+}
+
+header {
+    background-color: #FFFBE4;
+    height: auto;
 }
 
 input, select {
@@ -9,6 +19,7 @@ input, select {
     text-align: center;
     margin-bottom: 20px;
     margin: 40px;
+    font-family: 'Special Elite', sans-serif;
 }
 
 #filtros {
@@ -46,7 +57,6 @@ footer :not(img) {
     margin-left: 90%;
     border: 2px solid black;
     border-radius: 100px;
-
     /* sombra do button */
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
     transition: box-shadow 0.3s ease; 
