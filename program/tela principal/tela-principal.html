@@ -18,37 +18,31 @@
         <div id="filtros">
             <input type="date">
 
-            <select name="" id="">
+            <select name="" id="centroFiltrado" onchange="FiltroCentro()">
                 <option value="" disabled selected>Centro de distribuição</option>
-                <option value="">Campinas</option>
-                <option value="">Guarulhos</option>
-                <option value="">Ribeirão Preto</option>
+                <option value="3">Campinas</option>
+                <option value="2">São Paulo</option>
+                <option value="1">Ribeirão Preto</option>
             </select>
         </div>
 
-        <table>
+        <table id="tabela">
             <tr>
                 <th>Data</th>
                 <th>Centro de Distribuição</th>
                 <th>Usuário</th>
             </tr>
 
-            <tr>
+            <!-- <tr>
                 <td>Exemplo</td>
                 <td>Exemplo</td>
                 <td>Exemplo</td>
-            </tr>
-
-            <tr>
-                <td>Exemplo</td>
-                <td>Exemplo</td>
-                <td>Exemplo</td>
-            </tr>
+            </tr> -->
         </table>
     </main>
 
     <footer>
-        <button id="butaoAdd"><img src="https://cdn-icons-png.flaticon.com/512/7794/7794550.png" id="imgMais"></button>
+        <a href="../tela cadastrar programacao/tela-cadastra-prog.html"><button id="butaoAdd"><img src="https://cdn-icons-png.flaticon.com/512/7794/7794550.png" id="imgMais"></button></a>
     </footer>
     
 
