@@ -1,16 +1,24 @@
 body {
     background-color: #013C31;
     font-family: 'Special Elite', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 #logo {
-    width: 9%;
+    width: 5%;
     margin-left: 15px;
 }
 
 header {
     background-color: #FFFBE4;
     height: auto;
+}
+
+main {
+    flex-grow: 1;
 }
 
 input, select {
@@ -46,14 +54,13 @@ td:nth-child(odd), th:nth-child(odd) {
 
 footer :not(img) {
     background-color: #FFFBE4;
-    padding: 10px;
-    margin-top: 40px;
-    height: 60px;
+    padding: 8px;
+    height: 5%;
     width: 100%;
 }
 
 #imgMais {
-    width: 4%;
+    width: 2%;
     margin-left: 90%;
     border: 2px solid black;
     border-radius: 100px;
