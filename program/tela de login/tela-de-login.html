@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0;
+        }
+        .login-container {
+            background-color: #013C31;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 18px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px 0;
+            background-color: #ffffff;
+            border: none;
+            color: #013C31;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #00614f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="LoginServlet" method="POST">
+        <label for="Usuario">Usuário:</label>
+        <input type="text" id="Usuario" name="Usuario" required><br>
+        
+        <label for="Senha">Senha:</label>
+        <input type="password" id="Senha" name="Senha" required><br>
+        
+        <input type="submit" value="Entrar">
+    </form>
+</div>
+
+<script src="tela-de-login-funcional.js"></script>
+</body>
+</html>
