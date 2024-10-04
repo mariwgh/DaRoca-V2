@@ -18,7 +18,7 @@
         <div id="filtros">
             <input type="date">
 
-            <select name="" id="centroFiltrado" onchange="FiltroCentro()">
+            <select name="" id="centroFiltrado" onchange = "FiltroCentro()">
                 <option value="" disabled selected>Centro de distribuição</option>
                 <option value="3">Campinas</option>
                 <option value="2">São Paulo</option>
@@ -26,18 +26,22 @@
             </select>
         </div>
 
-        <table id="tabela">
-            <tr>
-                <th>Data</th>
-                <th>Centro de Distribuição</th>
-                <th>Usuário</th>
-            </tr>
-
-            <!-- <tr>
-                <td>Exemplo</td>
-                <td>Exemplo</td>
-                <td>Exemplo</td>
-            </tr> -->
+        <table >
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Centro de Distribuição</th>
+                    <th>Usuário</th>
+                </tr>
+            </thead>
+            
+            <tbody id="tabela">
+                <!-- <tr>
+                    <td>Exemplo</td>
+                    <td>Exemplo</td>
+                    <td>Exemplo</td>
+                </tr> -->
+            </tbody>
         </table>
     </main>
 
