@@ -7,11 +7,19 @@
 * Mariana Marietti da Costa
 
 ## Guia de Marca
-  - Bege: FFFBE4
-  - Verde: 013C31
-  - Laranja: EFC199
-  - Laranja forte: FE740D
-  - Fonte: Special Elite
+- Cores:
+  - Bege: #fffbe4
+  - Verde escuro: #013c31
+  - Verde médio: #0a5b3c
+  - Verde claro: #81a425
+  - Laranja forte: #f16d01
+  - Laranja claro: #ff8328
+  - Branco: #ffffff
+  - Preto: #000000
+    
+- Fontes:
+  - Anton - títulos, destaques
+  - Questrial - subtítulos, textos
 
 ## Visão Geral
 
