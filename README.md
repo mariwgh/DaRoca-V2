@@ -1,4 +1,4 @@
-# Projeto 2 de TI129 - Prática Profissional I - Equipe 7: DaRoca
+# Projeto 2 de TI129 - Prática Profissional I - Equipe 8: DaRoca
 
 ## Integrantes
 
