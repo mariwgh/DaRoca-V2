@@ -5,13 +5,17 @@ body {
 }
 
 #logo {
-    width: 9%;
+    width: 5%;
     margin-left: 15px;
 }
 
 header {
     background-color: #FFFBE4;
     height: auto;
+}
+
+main {
+    flex-grow: 1;
 }
 
 input, select {
@@ -96,4 +100,16 @@ footer button {
 
 #butaoVeiculosMec:hover {
     transform: scale(1.1);
+}
+
+/* tela do mecanico */
+
+#mecanico {
+    padding: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 50%;
+    border-radius: 15px;
+    background: #FFFBE4;
 }
