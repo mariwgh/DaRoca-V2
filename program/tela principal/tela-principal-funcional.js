@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 function FiltroCentro() {
     
     let centroRequerido = document.getElementById("centroFiltrado").value;
@@ -30,4 +28,3 @@ function FiltroCentro() {
             console.error('Erro ao buscar os dados:', error);
         });
 }
->>>>>>> ea16f3065ff4059c5b194d40df7c657e4fb6ebca
