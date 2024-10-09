@@ -1,6 +1,7 @@
 body {
     background-color: #013C31;
-    font-family: 'Special Elite', sans-serif;
+    font-family: 'Questrial';
+    margin: 0; /* Remove margens padrão */
 }
 
 #logo {
@@ -44,28 +45,55 @@ td:nth-child(odd), th:nth-child(odd) {
     background-color: #d3d3d3;
 }
 
-footer :not(img) {
+footer {
+    display: flex; 
+    justify-content: flex-end; /* Alinha os botões ao canto direito */
     background-color: #FFFBE4;
     padding: 10px;
-    margin-top: 40px;
-    height: 60px;
-    width: 100%;
+    margin-top: 40px; 
+    height: 60px; 
 }
 
-#imgMais {
-    width: 4%;
-    margin-left: 90%;
-    border: 2px solid black;
-    border-radius: 100px;
+footer button {
+    background-color: #FFFBE4;
+    border: none; 
+    margin: 0 45px;
+    cursor: pointer;
+}
+
+#butaoVeiculosMec {
+    padding: 12px;
+    border: 1.5px solid black;
+    border-radius: 40px;
     /* sombra do button */
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
     transition: box-shadow 0.3s ease; 
 }
 
+#imgMais {
+    margin-left: 90%;
+    border: 1.5px solid black;
+    border-radius: 100px;
+    /* sombra do button */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.3s ease; 
+
+    width: 100%;
+}
+
 #butaoAdd {
+    width: 40px; 
+    padding: 0; 
+}
+
+#butaoAdd, #butaoVeiculosMec {
     transition: 0.3s;
 }
 
-#butaoAdd :hover {
+#butaoAdd:hover {
+    transform: scale(1.1);
+}
+
+#butaoVeiculosMec:hover {
     transform: scale(1.1);
 }
