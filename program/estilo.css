@@ -50,6 +50,9 @@ td:nth-child(odd), th:nth-child(odd) {
 }
 
 footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
     display: flex; 
     justify-content: flex-end; /* Alinha os botões ao canto direito */
     background-color: #FFFBE4;
@@ -112,8 +115,31 @@ a {
     padding: 5%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 2%;
     width: 50%;
     border-radius: 15px;
-    background: #FFFBE4;
+    background-color: #ebeae8;
+    border: solid 2px black;
+    font-family: 'Special Elite', sans-serif;
+}
+
+#titulo-mecanico {
+    color: rgb(255, 123, 0); 
+    padding-left: 20%; 
+    padding-top: 2%; 
+    font-family: 'BebasNeueRegular', sans-serif; 
+    font-size: 50px;
+}
+
+#butaoMecanico {
+    padding: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 1.5px solid black;
+    border-radius: 40px;
+    font-family: 'Special Elite', sans-serif;
+    /* sombra do button */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.3s ease; 
+    background-color: #ebeae8;
 }
