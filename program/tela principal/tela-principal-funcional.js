@@ -9,24 +9,40 @@ function FiltroCentro() {
             return response.json();
         })   
         .then(data => {
-            // data é um array de objetos
-            let centroEncontrado = data.find(centro => centro.codigoCentroDistribuicao == centroRequerido);
+            console.log(centroRequerido)
+            if (centroRequerido) {
+                data.forEach(centro => {
+                    // data é um array de objetos
+                    let centroEncontrado = data.find(centro => centro.codigoCentroDistribuicao == centroRequerido);
 
-            if (centroEncontrado) {
-                espaco.innerHTML += "<tr>" + 
-                                        "<td>Exemplo</td>" +
-                                        "<td>" + centroEncontrado.cidade + "</td>" +
-                                        "<td>Exemplo</td>" +
-                                    "</tr>";
-            } 
+                    if (centroEncontrado != "") {
+                        espaco.innerHTML += "<tr>" + 
+                                                "<td>Exemplo</td>" +
+                                                "<td>" + centroEncontrado.cidade + "</td>" +
+                                                "<td>Exemplo</td>" +
+                                            "</tr>";
+                    } 
+                    else {
+                        espaco.innerHTML += "<tr>" + 
+                                                "<td colspan='3'>Centro não encontrado</td>" + 
+                                            "</tr>";
+                    }
+                })
+            }
+
             else {
-                espaco.innerHTML += "<tr>" + 
-                                        "<td colspan='3'>Centro não encontrado</td>" + 
-                                    "</tr>";
+                // o usuário não escolheu nenhum centro, mostrar todos os centros
+                data.forEach(centro => {
+                    espaco.innerHTML += "<tr>" +
+                                            "<td>Exemplo</td>" +
+                                            "<td>" + centro.cidade + "</td>" +
+                                            "<td>Exemplo</td>" +
+                                        "</tr>";
+                });
             }
         })
 
         .catch(error => {
-            console.error('Erro ao buscar os dSados:', error);
+            console.error('Erro ao buscar os dados:', error);
         });
 }
