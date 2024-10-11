@@ -94,8 +94,9 @@ Esse sistema busca otimizar a manutenção da frota de veículos de DaRoca, gara
 ## Histórico de lançamentos
 
 Versão    | Data       | O que há de novo
---------- | ---------  | ---------
+--------- | ---------  | ----------------------------------------------------------
 1.0       | 20/09/2024 | Roadmap + MER + Wireframe
+2.0       | 11/10/2024 | Figma + tela principal + tela de mecânicos + tela de login
 
 ## Licença
 
