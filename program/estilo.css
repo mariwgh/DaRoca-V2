@@ -176,3 +176,43 @@ footer button {
     color: #f16d01;
     font-size: 30px;
 }
+
+
+/* tela de login */
+
+.login-container {
+    background-color: #f16d01;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#input-usuario, #input-senha {
+    width: 100%;
+    padding: 10px;
+    margin: 18px 0;
+    border: 1px solid #ff8328;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#input-entrar {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ffffff;
+    border: none;
+    color: #013C31;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#input-entrar:hover {
+    background-color: #00614f;
+}
