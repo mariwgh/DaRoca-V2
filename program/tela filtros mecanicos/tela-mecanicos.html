@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Mecânicos</title>
+    <link rel="stylesheet" href="../estilo.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Questrial&display=swap" rel="stylesheet">
+</head>
+
+<body onload="BuscarMecanicos()">
+    <header>
+        <img src="../../documents/daroca logo.png" id="logo">
+    </header>
+
+    <main>
+        <div id="filtros">
+            <b id="titleFilterVeic">Mecânicos</b>
+
+            <input type="date" id="dataFiltrado">
+
+            <select name="" id="centroFiltrado">
+                <option value="0" disabled selected>Centro de distribuição</option>
+                <option value="3">Campinas</option>
+                <option value="2">São Paulo</option>
+                <option value="1">Ribeirão Preto</option>
+            </select>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Código Mecanico</th>
+                    <th>Centro de Distribuição</th>
+                    <th>Nome</th>
+                    <th>Início Turno</th>
+                    <th>Fim Turno</th>
+                    <th>Início Almoço</th>
+                    <th>Fim Almoço</th>
+                </tr>
+            </thead>
+            
+            <tbody id="tabela">
+                <!-- <tr>
+                    <td>Exemplo</td>
+                    <td>Exemplo</td>
+                    <td>Exemplo</td>
+                </tr> -->
+            </tbody>    
+        </table>
+    </main>
+
+    <footer>
+        <a href="../tela principal/tela-principal.html"><button id="butaoVeiculosMec">Voltar</button></a>
+    </footer>
+    
+    <script src="tela-mecanicos-funcional.js"></script>
+</body>
+
+</html>

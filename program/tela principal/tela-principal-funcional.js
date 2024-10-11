@@ -1,6 +1,7 @@
 function FiltroCentro() {
     
     let centroRequerido = document.getElementById("centroFiltrado").value;
+    let dataRequerido = document.getElementById("dataFiltrado").value;
     let espaco = document.getElementById("tabela");
     espaco.innerHTML = ""; 
 
@@ -17,7 +18,7 @@ function FiltroCentro() {
 
                     if (centroEncontrado != "") {
                         espaco.innerHTML += "<tr>" + 
-                                                "<td>Exemplo</td>" +
+                                                "<td>" + dataRequerido + "</td>" +
                                                 "<td>" + centroEncontrado.cidade + "</td>" +
                                                 "<td>Exemplo</td>" +
                                             "</tr>";
@@ -34,7 +35,7 @@ function FiltroCentro() {
                 // o usuário não escolheu nenhum centro, mostrar todos os centros
                 data.forEach(centro => {
                     espaco.innerHTML += "<tr>" +
-                                            "<td>Exemplo</td>" +
+                                            "<td>" + dataRequerido + "</td>" +
                                             "<td>" + centro.cidade + "</td>" +
                                             "<td>Exemplo</td>" +
                                         "</tr>";

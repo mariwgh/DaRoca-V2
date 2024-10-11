@@ -24,7 +24,7 @@ input, select {
     text-align: center;
     margin-bottom: 20px;
     margin: 40px;
-    font-family: 'Special Elite', sans-serif;
+    font-family: 'Questrial';
 }
 
 #filtros {
@@ -43,6 +43,7 @@ table {
     border-radius: 10px;
     overflow: hidden; 
     margin: auto;
+    margin-bottom: 150px;
 }
 
 td:nth-child(odd), th:nth-child(odd) {
@@ -54,7 +55,7 @@ footer {
     position: fixed;
     width: 100%;
     display: flex; 
-    justify-content: flex-end; /* Alinha os botões ao canto direito */
+    justify-content: flex-end; 
     background-color: #FFFBE4;
     padding: 10px;
     margin-top: 40px; 
@@ -105,10 +106,6 @@ footer button {
     transform: scale(1.1);
 }
 
-a {
-    
-}
-
 /* tela do mecanico */
 
 #mecanico {
@@ -142,4 +139,13 @@ a {
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
     transition: box-shadow 0.3s ease; 
     background-color: #ebeae8;
+}
+
+
+/* tela filtro veiculos */
+
+#titleFilterVeic {
+    text-align: center; 
+    color: #f16d01;
+    font-size: 30px;
 }
