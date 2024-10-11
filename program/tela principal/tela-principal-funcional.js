@@ -4,8 +4,10 @@ function FiltroCentro() {
     let espaco = document.getElementById("tabela");
     espaco.innerHTML = ""; 
 
-    fetch("https://run.mocky.io/v3/cdf40161-3fda-476e-9641-9be412fba4dc")
-        .then(response => response.json())    
+    fetch("https://cenoura.glitch.me/centrosdistribuicao")
+        .then(response => {
+            return response.json();
+        })   
         .then(data => {
             // data é um array de objetos
             let centroEncontrado = data.find(centro => centro.codigoCentroDistribuicao == centroRequerido);
@@ -25,6 +27,6 @@ function FiltroCentro() {
         })
 
         .catch(error => {
-            console.error('Erro ao buscar os dados:', error);
+            console.error('Erro ao buscar os dSados:', error);
         });
 }
