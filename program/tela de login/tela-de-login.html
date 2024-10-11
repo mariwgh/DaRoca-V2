@@ -28,6 +28,7 @@
             border-radius: 50%;
             margin-left: 10px;
         }
+
         .login-container {
             background-color: #f16d01;
             color: #ffffff;
@@ -64,6 +65,12 @@
         input[type="submit"]:hover {
             background-color: #00614f;
         }
+
+        #message {
+            margin-top: 10px;
+            color: #ffffff;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -72,7 +79,7 @@
     </header>
     <div class="login-container">
         <h2>Login</h2>
-        <form>
+        <form id="loginForm">
             <label for="Usuario">Usuário:</label>
             <input type="text" id="Usuario" name="Usuario" required placeholder="Digite seu usuário"><br>
             
@@ -80,6 +87,7 @@
             <input type="password" id="Senha" name="Senha" required placeholder="Digite sua senha"><br>
             
             <input type="submit" value="Entrar">
+            <div id="message"></div>
         </form>
     </div>
 
