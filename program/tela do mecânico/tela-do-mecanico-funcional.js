@@ -6,14 +6,17 @@ function buscaMecanico() {
     .then( (dados) => {
         sentenca = ""
         for (indice in dados) {
-            if (dados[indice].nome == 'Murilo Correia Sousa') {
-                sentenca += '<p><b>' + dados[indice].inicioTurno + ' - ' + dados[indice].inicioAlmoco + '</b></p>'
-                sentenca += '<p>Preparação</p>' 
-                sentenca += '<p><b>' + dados[indice].inicioAlmoco + ' - ' + dados[indice].fimAlmoco + '</b></p>'
-                sentenca += '<p>Almoço</p>'
-                sentenca += '<p><b>' + dados[indice].fimAlmoco + ' - ' + dados[indice].fimTurno + '</b></p>'
-                sentenca += '<p>Trabalho</p>'
-            }
+            sentenca += '<h1 id="titulo-mecanico">Mecanico ' + dados[indice].codigoMecanico + '</h1>'
+            sentenca += '<table id="tabela-mecanico"><tr><td>Início</td>'
+            sentenca += '<td>Fim</td>'
+            sentenca += '<td>Ordem de Serviço</td>'
+            sentenca += '<td>Veículo</td>'
+            sentenca += '<td>Tipo</td></tr>'
+            sentenca += '<tr><td>' + dados[indice].inicioTurno + '</td>'
+            sentenca += '<td>' + dados[indice].fimTurno + '</td>'
+            sentenca += '<td></td>'
+            sentenca += '<td></td>'
+            sentenca += '<td></td></tr></table>'
         }
         document.querySelector("#mecanico").innerHTML = sentenca
     })
