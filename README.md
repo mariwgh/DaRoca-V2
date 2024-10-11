@@ -70,6 +70,14 @@ O software proposto para o projeto tem como objetivo **automatizar a distribuiç
   - **Design**: Balsamic para wireframes, Figma para o design de interface final
   - **Modelagem de Dados**: BrModelo para diagramação MER e modelo lógico (SQL)
 
+## Tutoriais 
+
+1. Com o Visual Studio Code já instalado e conectado, instale o GitHub Desktop (é indicado instalar o Insomnia também).
+2. Conecte o GitHub Desktop com a sua conta.
+3. Clone um repositório da internet.
+4. Clique em "Open with Visual Studio".
+5. Ao dar commits, coloque identificação de commit e push origin.
+
 ## Roadmap
 
   - **13/09/2024**: Criação das primeiras tarefas no Kanban (opcional).
