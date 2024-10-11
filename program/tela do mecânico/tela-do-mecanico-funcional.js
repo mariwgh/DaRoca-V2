@@ -7,7 +7,7 @@ function buscaMecanico() {
         sentenca = ""
         for (indice in dados) {
             sentenca += '<h1 id="titulo-mecanico">Mecanico ' + dados[indice].codigoMecanico + '</h1>'
-            sentenca += '<table><tr><td>Início</td>'
+            sentenca += '<table id="tabela-mecanico"><tr><td>Início</td>'
             sentenca += '<td>Fim</td>'
             sentenca += '<td>Ordem de Serviço</td>'
             sentenca += '<td>Veículo</td>'

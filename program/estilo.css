@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/franchise');
+
 body {
     background-color: #013C31;
     font-family: 'Questrial';
@@ -120,7 +122,7 @@ footer button {
     margin-right: auto;
     margin-top: 2%;
     margin-bottom: 2%;
-    width: 40%;
+    width: 50%;
     border-radius: 15px;
     background-color: #FFFBE4;
     border: solid 2px black;
@@ -130,8 +132,12 @@ footer button {
 #titulo-mecanico {
     color: rgb(255, 123, 0); 
     padding-left: 10%; 
-    font-family: 'BebasNeueRegular', sans-serif; 
-    font-size: 30px;
+    font-family:'Franchise', sans-serif; 
+    font-size: 50px;
+}
+
+#tabela-mecanico {
+    width: 80%;
 }
 
 #butaoVoltar {
