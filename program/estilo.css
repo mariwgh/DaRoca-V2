@@ -59,7 +59,7 @@ footer {
     background-color: #FFFBE4;
     padding: 10px;
     margin-top: 40px; 
-    height: 60px; 
+    height: 40px; 
 }
 
 footer button {
@@ -92,6 +92,7 @@ footer button {
 #butaoAdd {
     width: 40px; 
     padding: 0; 
+    margin-right: 90px;
 }
 
 #butaoAdd, #butaoVeiculosMec {
@@ -107,9 +108,22 @@ footer button {
 }
 
 
+
 /* tela do mecanico */
 
 #mecanico {
+    padding: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    width: 50%;
+    border-radius: 15px;
+    background-color: #ebeae8;
+    border: solid 2px black;
+    font-family: 'Special Elite', sans-serif;
+}
+
+#veiculo {
     padding: 5%;
     margin-left: auto;
     margin-right: auto;
@@ -129,7 +143,15 @@ footer button {
     font-size: 50px;
 }
 
-#butaoMecanico {
+#titulo-veiculo {
+    color: rgb(255, 123, 0); 
+    padding-left: 20%; 
+    padding-top: 2%; 
+    font-family: 'BebasNeueRegular', sans-serif; 
+    font-size: 50px;
+}
+
+#butaoVoltar {
     padding: 30px;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -140,6 +162,10 @@ footer button {
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
     transition: box-shadow 0.3s ease; 
     background-color: #ebeae8;
+}
+
+#butaoVoltar:hover {
+    transform: scale(1.1);
 }
 
 

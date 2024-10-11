@@ -1,25 +1,20 @@
-let sentenca = "";
-
-function buscaMecanico(id) {    
-    fetch('https://run.mocky.io/v3/cdf40161-3fda-476e-9641-9be412fba4dc')
+function buscaMecanico() {    
+    fetch('https://cenoura.glitch.me/mecanicos')
     .then(response => {
         return response.json();
     })
     .then( (dados) => {
-        if (dados.codigoMecanino == id) {
-            sentenca += '<p>' + dados.inicioTurno + dados.inicioAlmoco + '</p>'
-            sentenca += '<p>Preparação</p>' 
-            sentenca += '<p>' + dados.inicioAlmoco + dados.fimAlmoco + '</p>'
-            sentenca += '<p>Almoço</p>'
-            sentenca += '<p>' + dados.fimAlmoço + dados.fimTurno + '</p>'
-            sentenca += '<p>Trabalho</p>'
+        sentenca = ""
+        for (indice in dados) {
+            if (dados[indice].nome == 'Murilo Correia Sousa') {
+                sentenca += '<p><b>' + dados[indice].inicioTurno + ' - ' + dados[indice].inicioAlmoco + '</b></p>'
+                sentenca += '<p>Preparação</p>' 
+                sentenca += '<p><b>' + dados[indice].inicioAlmoco + ' - ' + dados[indice].fimAlmoco + '</b></p>'
+                sentenca += '<p>Almoço</p>'
+                sentenca += '<p><b>' + dados[indice].fimAlmoco + ' - ' + dados[indice].fimTurno + '</b></p>'
+                sentenca += '<p>Trabalho</p>'
+            }
         }
+        document.querySelector("#mecanico").innerHTML = sentenca
     })
-    .catch(error => {
-        console.error('Erro ao buscar os dados:', error);
-    });
-}
-
-function Escrever() {
-    document.querySelector("#mecanico").innerHTML = sentenca
 }
