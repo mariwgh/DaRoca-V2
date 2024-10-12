@@ -4,6 +4,7 @@ function realizarLogin() {
     let espaco = document.getElementById("message");
     espaco.innerHTML = ""; 
 
+    // API não está funcionando //
     fetch("https://cenoura.glitch.me/usuarios")
         .then(response => response.json())
         .then(data => {
