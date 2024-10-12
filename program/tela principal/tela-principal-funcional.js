@@ -5,7 +5,7 @@ function FiltroCentro() {
     let espaco = document.getElementById("tabela");
     espaco.innerHTML = ""; 
 
-    //  buscar veículos
+    // buscar veículos
     fetch("https://cenoura.glitch.me/veiculos")
         .then(response => response.json())
         .then(veiculos => {
@@ -21,7 +21,7 @@ function FiltroCentro() {
                             if (veiculo.codigoCentroDistribuicao == centroRequerido) {
                                 // ordens associadas a esse veículo
                                 let ordensDoVeiculo = ordens.filter(ordem => ordem.codigoVeiculo == veiculo.codigoVeiculo);
-                                ordensFiltradas.push(ordensDoVeiculo);
+                                ordensFiltradas.push(...ordensDoVeiculo);
                             }
                         });
                     } else {
@@ -29,16 +29,30 @@ function FiltroCentro() {
                         ordensFiltradas = ordens;
                     }
 
+                    // se o filtro de data foi especificado
+                    if (dataRequerido) {
+                        ordensFiltradas = ordensFiltradas.filter(ordem => {
+                            let dataOrdem = ordem.criadaEm.split('T')[0];
+                            // comparar se a data da ordem é igual à data filtrada
+                            return dataOrdem === dataRequerido;
+                        });
+                    }
+
                     // exibir as ordens na tabela
                     if (ordensFiltradas.length > 0) {
-                        console.log(ordensFiltradas)
-
                         ordensFiltradas.forEach(ordem => {
                             let veiculoCorrespondente = veiculos.find(veiculo => veiculo.codigoVeiculo == ordem.codigoVeiculo);
-                            let centroDistribuicao = veiculoCorrespondente ? veiculoCorrespondente.codigoCentroDistribuicao : "Centro não encontrado";
+
+                            let centroDistribuicao;
+
+                            if (veiculoCorrespondente) {
+                                centroDistribuicao = veiculoCorrespondente.codigoCentroDistribuicao;
+                            } else {
+                                centroDistribuicao = "Centro não encontrado";
+                            }
 
                             espaco.innerHTML += "<tr>" + 
-                                                    "<td>" + (dataRequerido || ordem.criadaEm) + "</td>" +
+                                                    "<td>" + ordem.criadaEm + "</td>" +
                                                     "<td>" + centroDistribuicao + "</td>" +
                                                     "<td>Exemplo</td>" +
                                                 "</tr>";
