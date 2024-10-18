@@ -17,18 +17,12 @@
 
     <main>
         <div id="filtros">
-            <div id="filtros">
-                <b id="titleFilterVeic">Ordens de serviço</b>
+            <b id="titleFilterVeic">Ordens de serviço</b>
 
-                <input type="date" id="dataFiltrado" onchange="FiltroCentro()">
+            <input type="date" id="dataFiltrado" onchange="BuscarOrdens()">
 
-                <select name="" id="centroFiltrado" onchange="FiltroCentro()">
-                    <option value="0" disabled selected>Centro de distribuição</option>
-                    <option value="3">Campinas</option>
-                    <option value="2">São Paulo</option>
-                    <option value="1">Ribeirão Preto</option>
-                </select>
-            </div>
+            <input type="number" id="duracaoFiltrado" onchange="BuscarOrdens()" placeholder="Duração">
+        </div>
 
         <table>
             <thead>
@@ -55,7 +49,6 @@
         <a href="../tela de progresso/tela-progresso.html"><button id="butaoVeiculosMec">Gerar</button></a>
     </footer>
     
-
     <script src="tela-ordens-funcional.js"></script>
 </body>
 
