@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordens de Serviço</title>
+    <link rel="stylesheet" href="../estilo.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Questrial&display=swap" rel="stylesheet">
+</head>
+
+<body onload="BuscarOrdens()">
+    <header>
+        <img src="../../documents/daroca logo.png" id="logo">
+    </header>
+
+    <main>
+        <div id="filtros">
+            <div id="filtros">
+                <b id="titleFilterVeic">Ordens de serviço</b>
+
+                <input type="date" id="dataFiltrado" onchange="FiltroCentro()">
+
+                <select name="" id="centroFiltrado" onchange="FiltroCentro()">
+                    <option value="0" disabled selected>Centro de distribuição</option>
+                    <option value="3">Campinas</option>
+                    <option value="2">São Paulo</option>
+                    <option value="1">Ribeirão Preto</option>
+                </select>
+            </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ordem de serviço</th>
+                    <th>Data</th>
+                    <th>Centro de Distribuição</th>
+                    <th>Duração</th>
+                    <th>Selecionar</th>
+                </tr>
+            </thead>
+            
+            <tbody id="tabela">
+                <!-- <tr>
+                    <td>Exemplo</td>
+                    <td>Exemplo</td>
+                    <td>Exemplo</td>
+                </tr> -->
+            </tbody>    
+        </table>
+    </main>
+
+    <footer>
+        <a href="../tela de progresso/tela-progresso.html"><button id="butaoVeiculosMec">Gerar</button></a>
+    </footer>
+    
+
+    <script src="tela-ordens-funcional.js"></script>
+</body>
+
+</html>
+
