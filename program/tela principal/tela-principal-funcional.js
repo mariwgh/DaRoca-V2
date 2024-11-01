@@ -54,7 +54,7 @@ function FiltroCentro() {
                             espaco.innerHTML += "<tr>" + 
                                                     "<td>" + ordem.criadaEm + "</td>" +
                                                     "<td>" + centroDistribuicao + "</td>" +
-                                                    "<td>Exemplo</td>" +
+                                                    "<td id='nomeMecAllign'>Exemplo</td>" +
                                                 "</tr>";
                         });
                     } else {

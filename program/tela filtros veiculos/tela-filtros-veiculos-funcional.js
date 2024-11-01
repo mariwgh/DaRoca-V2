@@ -13,7 +13,7 @@ function BuscarVeiculos() {
                 espaco.innerHTML += "<tr>" + 
                                         "<td>" + veiculo.codigoVeiculo + "</td>" +
                                         "<td>" + veiculo.codigoCentroDistribuicao + "</td>" +
-                                        "<td>" + veiculo.fabricante + "</td>" +
+                                        "<td id='nomeMecAllign'>" + veiculo.fabricante + "</td>" +
                                         "<td>" + veiculo.modelo + "</td>" +
                                         "<td>" + veiculo.ano + "</td>" +
                                         "<td>" + veiculo.placa + "</td>" +

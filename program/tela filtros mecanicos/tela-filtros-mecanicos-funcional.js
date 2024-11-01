@@ -13,7 +13,7 @@ function BuscarMecanicos() {
                 espaco.innerHTML += "<tr>" + 
                                         "<td>" + mecanico.codigoMecanico + "</td>" +
                                         "<td>" + mecanico.codigoCentroDistribuicao + "</td>" +
-                                        "<td>" + mecanico.nome + "</td>" +
+                                        "<td id='nomeMecAllign'>" + mecanico.nome + "</td>" +
                                         "<td>" + mecanico.inicioTurno + "</td>" +
                                         "<td>" + mecanico.fimTurno + "</td>" +
                                         "<td>" + mecanico.inicioAlmoco + "</td>" +
