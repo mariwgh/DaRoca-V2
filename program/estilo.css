@@ -166,6 +166,10 @@ footer button {
     font-size: 30px;
 }
 
+#nomeMecAllign {
+    text-align: left;
+}
+
 
 /* tela de login */
 
