@@ -13,7 +13,7 @@ function BuscarVeiculos() {
         for (ind in dadosVeiculo) {
            if (centroRequerido != "0") {
                 if (dadosVeiculo[ind].codigoCentroDistribuicao == parseInt(centroRequerido)) {
-                    // if (dataRequerido) {
+                    // if (dataRequerido != "") {
                     //     if (dadosVeiculo[ind].ano == parseInt(dataRequerido)) {
                     //         sentenca += "<tr><td>" + dadosVeiculo[ind].codigoVeiculo + "</td>"
                     //         sentenca += "<td>" + dadosVeiculo[ind].codigoCentroDistribuicao + "</td>"
@@ -36,7 +36,7 @@ function BuscarVeiculos() {
                 //}
             }
             else {
-                // if (dataRequerido) {
+                // if (dataRequerido != "") {
                 //     if (dadosVeiculo[ind].ano == parseInt(dataRequerido)) {
                 //         sentenca += "<tr><td>" + dadosVeiculo[ind].codigoVeiculo + "</td>"
                 //         sentenca += "<td>" + dadosVeiculo[ind].codigoCentroDistribuicao + "</td>"
