@@ -19,9 +19,9 @@
         <div id="filtros">
             <b id="titleFilterVeic">Veículos</b>
 
-            <input type="date" id="dataFiltrado">
+            <input type="number" id="dataFiltrado" placeholder="Ano">
 
-            <select name="" id="centroFiltrado">
+            <select name="" id="centroFiltrado" onchange="BuscarMecanicos()">
                 <option value="0" disabled selected>Centro de distribuição</option>
                 <option value="3">Campinas</option>
                 <option value="2">São Paulo</option>

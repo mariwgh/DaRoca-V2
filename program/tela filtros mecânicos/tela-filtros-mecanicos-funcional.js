@@ -1,29 +1,37 @@
 function BuscarMecanicos() {
-    
-    let espaco = document.getElementById("tabela");
 
-    fetch("https://cenoura.glitch.me/mecanicos")
-        .then(response => {
-            return response.json();
-        })   
-        .then(data => {
-            data.forEach(mecanico => {
-                // data é um array de objetos
+    let centroRequerido = document.getElementById("centroFiltrado").value;
 
-                espaco.innerHTML += "<tr>" + 
-                                        "<td>" + mecanico.codigoMecanico + "</td>" +
-                                        "<td>" + mecanico.codigoCentroDistribuicao + "</td>" +
-                                        "<td>" + mecanico.nome + "</td>" +
-                                        "<td>" + mecanico.inicioTurno + "</td>" +
-                                        "<td>" + mecanico.fimTurno + "</td>" +
-                                        "<td>" + mecanico.inicioAlmoco + "</td>" +
-                                        "<td>" + mecanico.fimAlmoco + "</td>" +
-                                    "</tr>";
-                
-            })
-        })
+    fetch('https://cenoura.glitch.me/mecanicos')
+    .then(response => {
+        return response.json();
+    })
+    .then( (dadosMecanico) => {
+            sentenca = ""
 
-        .catch(error => {
-            console.error('Erro ao buscar os dados:', error);
-        });
+            for (ind in dadosMecanico) {
+                if (centroRequerido != "0") {
+                    if (dadosMecanico[ind].codigoCentroDistribuicao == parseInt(centroRequerido)) {
+                        sentenca += "<tr><td>" + dadosMecanico[ind].codigoMecanico + "</td>"
+                        sentenca += "<td>" + dadosMecanico[ind].codigoCentroDistribuicao + "</td>"
+                        sentenca += "<td>" + dadosMecanico[ind].nome + "</td>"
+                        sentenca += "<td>" + dadosMecanico[ind].inicioTurno + "</td>"
+                        sentenca += "<td>" + dadosMecanico[ind].fimTurno + "</td>"
+                        sentenca += "<td>" + dadosMecanico[ind].inicioAlmoco + "</td>"
+                        sentenca += "<td>" + dadosMecanico[ind].fimAlmoco + "</td></tr>"
+                    }
+                }
+                else {
+                    sentenca += "<tr><td>" + dadosMecanico[ind].codigoMecanico + "</td>"
+                    sentenca += "<td>" + dadosMecanico[ind].codigoCentroDistribuicao + "</td>"
+                    sentenca += "<td>" + dadosMecanico[ind].nome + "</td>"
+                    sentenca += "<td>" + dadosMecanico[ind].inicioTurno + "</td>"
+                    sentenca += "<td>" + dadosMecanico[ind].fimTurno + "</td>"
+                    sentenca += "<td>" + dadosMecanico[ind].inicioAlmoco + "</td>"
+                    sentenca += "<td>" + dadosMecanico[ind].fimAlmoco + "</td></tr>"
+            }
+        }
+
+        document.querySelector("#tabela").innerHTML = sentenca
+    })
 }
