@@ -14,14 +14,14 @@
     <div class="login-container">
         <h2>Login</h2>
         
-        <form>
+        <form onsubmit="realizarLogin(event)">
             <label>Usuário:</label>
             <input type="text" id="input-usuario" required placeholder="Digite seu usuário"><br>
             
             <label>Senha:</label>
             <input type="password" id="input-senha" required placeholder="Digite sua senha"><br>
             
-            <input type="submit" value="Entrar" id="input-entrar" onclick="realizarLogin()">
+            <input type="submit" value="Entrar" id="input-entrar">
 
             <label id="message"></label>
         </form>
