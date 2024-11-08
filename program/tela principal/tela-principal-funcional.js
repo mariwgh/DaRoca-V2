@@ -2,6 +2,7 @@ function FiltroCentro() {
     
     let centroRequerido = document.getElementById("centroFiltrado").value;
     let dataRequerido = document.getElementById("dataFiltrado").value;
+    
     let espaco = document.getElementById("tabela");
     espaco.innerHTML = ""; 
 
