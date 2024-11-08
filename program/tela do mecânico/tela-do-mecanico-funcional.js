@@ -1,7 +1,7 @@
-const feito = []
-var ind = 0
-
 function buscaMecanico() {    
+
+    const feito = []
+    var ind = 0
 
     let centroRequerido = document.getElementById("centroFiltrado").value;
 
@@ -27,14 +27,12 @@ function buscaMecanico() {
                         sentenca += '<td>Veículo</td>'
                         sentenca += '<td>Tipo</td></tr>'
 
-                        muni = dadosMecanico[lento].codigoCentroDistribuicao
-
                         horas = 0.0
 
                         for (rapido in dadosOrdem) {
                             let concluido = feito.includes(dadosOrdem[rapido].numeroOrdemServico)
 
-                            if (dadosOrdem[rapido].codigoCentroDistribuicao == muni && horas <= 9 && !concluido) {
+                            if (dadosOrdem[rapido].codigoCentroDistribuicao == parseInt(centroRequerido) && horas <= 9 && !concluido) {
                                 if (horas + 8 < 11) {
                                     if ((horas - Math. floor(horas)) !== 0) {
                                         sentenca += '<tr><td>' + (horas + 7.5) + ':30:00</td>'

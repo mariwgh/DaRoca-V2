@@ -9,11 +9,23 @@ function BuscarMecanicos() {
     .then( (dadosMecanico) => {
             sentenca = ""
 
+            muni = ""
+
             for (ind in dadosMecanico) {
+                if (dadosMecanico[ind].codigoCentroDistribuicao == "1") {
+                    muni = "Ribeirão Preto"
+                }
+                else if (dadosMecanico[ind].codigoCentroDistribuicao == "2") {
+                    muni = "São Paulo"
+                }
+                else if (dadosMecanico[ind].codigoCentroDistribuicao == "3") {
+                    muni = "Campinas"
+                }
+
                 if (centroRequerido != "0") {
                     if (dadosMecanico[ind].codigoCentroDistribuicao == parseInt(centroRequerido)) {
                         sentenca += "<tr><td>" + dadosMecanico[ind].codigoMecanico + "</td>"
-                        sentenca += "<td>" + dadosMecanico[ind].codigoCentroDistribuicao + "</td>"
+                        sentenca += "<td>" + dadosMecanico[ind].codigoCentroDistribuicao + " - " + muni + "</td>"
                         sentenca += "<td>" + dadosMecanico[ind].nome + "</td>"
                         sentenca += "<td>" + dadosMecanico[ind].inicioTurno + "</td>"
                         sentenca += "<td>" + dadosMecanico[ind].fimTurno + "</td>"
@@ -23,7 +35,7 @@ function BuscarMecanicos() {
                 }
                 else {
                     sentenca += "<tr><td>" + dadosMecanico[ind].codigoMecanico + "</td>"
-                    sentenca += "<td>" + dadosMecanico[ind].codigoCentroDistribuicao + "</td>"
+                    sentenca += "<td>" + dadosMecanico[ind].codigoCentroDistribuicao + " - " + muni + "</td>"
                     sentenca += "<td>" + dadosMecanico[ind].nome + "</td>"
                     sentenca += "<td>" + dadosMecanico[ind].inicioTurno + "</td>"
                     sentenca += "<td>" + dadosMecanico[ind].fimTurno + "</td>"
