@@ -46,6 +46,7 @@ table {
     overflow: hidden; 
     margin: auto;
     margin-bottom: 150px;
+    width: 100%;
 }
 
 td:nth-child(odd), th:nth-child(odd) {
