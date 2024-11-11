@@ -1,11 +1,15 @@
-function buscaMecanico() {    
+function buscaMecanico(pagina = 1) {    
 
     const feito = []
     var ind = 0
 
     let centroRequerido = document.getElementById("centroFiltrado").value;
 
-    fetch('https://cenoura.glitch.me/mecanicos')
+    // quantidade de mecânicos a ser mostrada
+    const quantidade = 5;
+    const codigoMecanico = (pagina - 1) * quantidade + 1; 
+
+    fetch(`https://cenoura.glitch.me/mecanicos/${codigoMecanico}/${quantidade}`)
     .then(response => {
         return response.json();
     })
@@ -20,12 +24,12 @@ function buscaMecanico() {
             for (lento in dadosMecanico) {
                 if (centroRequerido != "0") {
                     if (dadosMecanico[lento].codigoCentroDistribuicao == parseInt(centroRequerido)) {
-                        sentenca += '<h1 id="titulo-mecanico">Mecanico ' + dadosMecanico[lento].codigoMecanico + ' - ' + dadosMecanico[lento].nome + '</h1>'
-                        sentenca += '<table id="tabela-mecanico"><tr><td>Início</td>'
-                        sentenca += '<td>Tempo Estimado</td>'
-                        sentenca += '<td>Ordem de Serviço</td>'
-                        sentenca += '<td>Veículo</td>'
-                        sentenca += '<td>Tipo</td></tr>'
+                        sentenca += '<h1 id="titulo-mecanico">Mecânico ' + dadosMecanico[lento].codigoMecanico + ' - ' + dadosMecanico[lento].nome + '</h1>'
+                        sentenca += '<table id="tabela-mecanico"><tr><th>Início</th>'
+                        sentenca += '<th>Tempo Estimado</th>'
+                        sentenca += '<th>Ordem de Serviço</th>'
+                        sentenca += '<th>Veículo</th>'
+                        sentenca += '<th>Tipo</th></tr>'
 
                         horas = 0.0
 
@@ -84,12 +88,12 @@ function buscaMecanico() {
                     }
                 }
                 else {
-                    sentenca += '<h1 id="titulo-mecanico">Mecanico ' + dadosMecanico[lento].codigoMecanico + ' - ' + dadosMecanico[lento].nome + '</h1>'
-                    sentenca += '<table id="tabela-mecanico"><tr><td>Início</td>'
-                    sentenca += '<td>Tempo Estimado</td>'
-                    sentenca += '<td>Ordem de Serviço</td>'
-                    sentenca += '<td>Veículo</td>'
-                    sentenca += '<td>Tipo</td></tr>'
+                    sentenca += '<h1 id="titulo-mecanico">Mecânico ' + dadosMecanico[lento].codigoMecanico + ' - ' + dadosMecanico[lento].nome + '</h1>'
+                    sentenca += '<table id="tabela-mecanico"><tr><th>Início</th>'
+                    sentenca += '<th>Tempo Estimado</th>'
+                    sentenca += '<th>Ordem de Serviço</th>'
+                    sentenca += '<th>Veículo</th>'
+                    sentenca += '<th>Tipo</th></tr>'
 
                     muni = dadosMecanico[lento].codigoCentroDistribuicao
 
@@ -149,8 +153,12 @@ function buscaMecanico() {
                     }
                 }
             sentenca += '</table>'
+
+            
         }
         document.querySelector("#mecanico").innerHTML = sentenca
+
+        document.querySelector("#mecanico").innerHTML += `<button id="butaoVeiculosMec" onclick="buscaMecanico(${pagina + 1})">Próxima Página</button>`;
         })
     })
 }

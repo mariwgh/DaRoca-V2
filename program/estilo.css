@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/franchise');
+/* @import url('https://fonts.cdnfonts.com/css/franchise'); */
 
 body {
     background-color: #013C31;
@@ -42,7 +42,7 @@ table, tr, th, td {
 }
 
 table {
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden; 
     margin: auto;
     margin-bottom: 150px;
@@ -121,24 +121,22 @@ footer button {
     padding: 2%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 10%;
     width: 50%;
     border-radius: 15px;
     background-color: #FFFBE4;
     border: solid 2px black;
-    font-family: 'Special Elite', sans-serif;
 }
 
 #titulo-mecanico {
     color: rgb(255, 123, 0); 
     padding-left: 10%; 
-    font-family:'Franchise', sans-serif; 
     font-size: 50px;
 }
 
 #tabela-mecanico {
     width: 80%;
+    border: 1px solid black;
 }
 
 #butaoVoltar {
@@ -147,7 +145,6 @@ footer button {
     padding-bottom: 12px;
     border: 1.5px solid black;
     border-radius: 40px;
-    font-family: 'Special Elite', sans-serif;
     /* sombra do button */
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
     transition: box-shadow 0.3s ease; 
@@ -164,7 +161,8 @@ footer button {
 #titleFilterVeic {
     text-align: center; 
     color: #f16d01;
-    font-size: 30px;
+    font-size: 35px;
+    font-family: 'Anton';
 }
 
 #nomeMecAllign {
@@ -174,9 +172,14 @@ footer button {
 
 /* tela de login */
 
+h2{
+    font-size: 30px;
+    font-family: 'Anton';
+}
+
 .login-container {
-    background-color: #f16d01;
-    color: #ffffff;
+    background-color: #FFFBE4;
+    color: #f16d01;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
@@ -191,9 +194,10 @@ footer button {
     width: 100%;
     padding: 10px;
     margin: 18px 0;
-    border: 1px solid #ff8328;
-    border-radius: 5px;
+    border-radius: 55px;
     box-sizing: border-box;
+    border: 1px solid black;
+    box-shadow: 3px 6px 3px rgba(0, 0, 0, 0.3); 
 }
 
 #input-entrar {
@@ -201,11 +205,12 @@ footer button {
     padding: 10px;
     margin: 18px 0;
     background-color: #ffffff;
-    border: none;
     color: #013C31;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 55px;
     cursor: pointer;
+    border: 1px solid black;
+    box-shadow: 3px 6px 3px rgba(0, 0, 0, 0.3); 
 }
 
 #input-entrar:hover {

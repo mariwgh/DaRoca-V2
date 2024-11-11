@@ -39,10 +39,20 @@ function BuscarOrdens() {
                 ordensFiltradas.forEach(ordem => {
                     // data é um array de objetos
 
+                    if (ordem.codigoCentroDistribuicao == "1") {
+                        muni = "Ribeirão Preto"
+                    }
+                    else if (ordem.codigoCentroDistribuicao == "2") {
+                        muni = "São Paulo"
+                    }
+                    else if (ordem.codigoCentroDistribuicao == "3") {
+                        muni = "Campinas"
+                    }
+
                     espaco.innerHTML += "<tr>" + 
                                             "<td>" + ordem.numeroOrdemServico + "</td>" +
                                             "<td>" + ordem.criadaEm + "</td>" +
-                                            "<td>" + ordem.codigoCentroDistribuicao + "</td>" +
+                                            "<td>" + ordem.codigoCentroDistribuicao + " - " + muni + "</td>" +
                                             "<td>" + ordem.tempoEstimado + "</td>" +
                                             "<td><input type='checkbox' id='selecionados'></td>" +
                                         "</tr>";
