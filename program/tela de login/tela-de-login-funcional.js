@@ -28,4 +28,6 @@ function realizarLogin(event) {
             return false
         }
     })
+
+    module.exports = dados
 }
