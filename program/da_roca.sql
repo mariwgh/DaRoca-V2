@@ -212,6 +212,7 @@ VALUES
 (5, 'Rodrigo Gonçalves', 'rgoncalves', 'mOntAnhA%12#13');
 
 
+--COMECA AQUI
 
 CREATE TABLE da_roca.mecanicos (
     codigoMecanico INT PRIMARY KEY,
@@ -248,3 +249,32 @@ CREATE TABLE da_roca.programacoes (
     centro int,
     usuario varchar(20)
 )
+
+
+--exemplo de cadastrar programacao 
+--(so sera ultilizada quando clicar no botao, diferente das outrras, n e cache):
+/*
+INSERT INTO da_roca.programacoes 
+(datas, centro, usuario)
+values
+('00-00-0000', 0, 'chico')
+*/
+
+
+--exemplos de inserts das telas de cache:
+/*
+INSERT INTO da_roca.mecanicos 
+(codigoMecanico, codigoCentroDistribuicao, nome, inicioTurno, fimTurno, inicioAlmoco, fimAlmoco)
+VALUES 
+(1, 1, 'Carlos Silva', '08:00:00', '17:00:00', '12:00:00', '13:00:00');
+
+INSERT INTO da_roca.veiculos 
+(codigoVeiculo, codigoCentroDistribuicao, fabricante, modelo, ano, placa, velocidadeMedia)
+VALUES 
+(1, 1, 'Ford', 'F-250', 2020, 'ABC-1234', 80);
+
+INSERT INTO da_roca.ordensservico 
+(numeroOrdemServico, codigoCentroDistribuicao, codigoVeiculo, tipoManutencao, criadaEm, tempoEstimado, status)
+VALUES 
+(1002, 2, 2, 'Reparo no motor', CURRENT_TIMESTAMP, '04:00:00', 'Pendente');
+*/

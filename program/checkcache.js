@@ -57,7 +57,7 @@ async function carregarDadosAPI(urlAPI, identificadorTela) {
 // implementação da busca de dados pré-existentes no banco de dados
 async function buscarDadosBancoDeDados(identificadorTela) {
     try {
-        const query = `SELECT * FROM daroca.${identificadorTela}`;
+        const query = `SELECT * FROM da_roca.${identificadorTela}`;
         const resultado = await execQuery(query);
 
         // verifica se encontrou dados e retorna
@@ -75,7 +75,6 @@ async function buscarDadosBancoDeDados(identificadorTela) {
 // implementação da função para salvar dados no banco de dados
 async function salvarDadosNoBancoDeDados(identificadorTela, dadosApi) {
     
-
     if (identificadorTela == 'mecanicos') {
         try {
             for (let i = 0; i < dadosApi.length; i++) {
