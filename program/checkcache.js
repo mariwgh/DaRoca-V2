@@ -118,6 +118,38 @@ async function salvarDadosNoBancoDeDados(identificadorTela, dadosApi) {
     }
 }
 
+async function inserirProgramacao(data, centro, usuario) {
+    try {
+        const query = 
+        `INSERT INTO da_roca.programacoes
+        (datas, centro, usuario)
+        VALUES 
+        (${data}, ${centro}, ${usuario}`;
+    
+        const resultado = await execQuery(query);
+    } 
+    catch (error) {
+        console.error("Erro ao inserir dados no banco:", error);
+    }
+}
+
+async function retornarProgramacoes() {
+    try {
+        const query = `SELECT * FROM da_roca.programacoes`;
+        const resultado = await execQuery(query);
+
+        // verifica se encontrou dados e retorna
+        if (recordset.length > 0) {
+            return JSON.parse(recordset[0].dados_json);
+        } else {
+            return [];  // ira cair em dadosNoBanco.length > 0
+        }
+    } catch (error) {
+        console.error("Erro ao buscar dados do banco:", error);
+        return [];
+    }
+}
+
 
 module.exports = {
     conectaBD,
@@ -131,3 +163,10 @@ module.exports = {
 
 //const { carregarDadosAPI } = require('./checkcache.js');
 //carregarDadosAPI('url-da-api', 'identificador-tela');
+
+//cache:
+//ao chamar a funcao sera retornado uma lista de dados, que devera ser impressa na tela
+
+//programacoes:
+//a tela de cad prog so usara a conexao com o bd, e tera sua funcao de inserir no bd, 
+//a tela principal/de prog retornar oq tem na tabela, mas n insere
