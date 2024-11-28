@@ -1,24 +1,43 @@
-const mssql = require("mssql");
+require("dotenv").config();
+const port = process.env.PORT;
+const sqlConnection = process.env.CONNECTION_STRING;
 
-const stringSQL = {
-    server: 'regulus.cotuca.unicamp.br',
-    database: 'BD24140',
-    user: 'BD24140',
-    password: 'BD24140',
-    options: {
-        trustServerCertificate: true,
-    }
-};
+const mssql = require("mssql");
+const express = require("express");
+const cors = require("cors");
+
+const app = express();
+
+app.use(express.json());
+app.use(cors());
 
 async function conectaBD() {
     try {
-        await mssql.connect(stringSQL);
+        await mssql.connect(sqlConnection);
         console.log("Conexão com o BD realizada com sucesso.");
     }
     catch (error) {
         console.log("Erro na conexão com o BD.", error);
     }
-} conectaBD()
+} 
+
+conectaBD()
+
+async function execQuery(querySQL) {
+    const { recordset } = await mssql.query(querySQL);
+    console.log("recordset", recordset);
+    return recordset;
+}
+
+app.get("/horarios", async (req, res) => {
+    try {
+        let result = await execQuery(`SELECT * FROM da_roca.horarios`);
+        res.json(result);
+    } catch (erro) {
+        console.error('Erro ao buscar os dados do banco:', erro);
+    }
+});
+
 
 // executa uma consulta SQL no banco de dados, é usada nas rotas
 async function execQuery(querySQL) {
@@ -158,6 +177,13 @@ module.exports = {
     salvarDadosNoBancoDeDados,
     carregarDadosAPI
 };
+
+app.use("/", (req, res) => {
+    res.json({ messagem: "Servidor em execução." })
+})
+
+// inicia o servidor
+app.listen(port, () => { console.log("API funcionando na porta: ", port) })
 
 //no outro arquivo, para usar essas funcoes, colocar:
 

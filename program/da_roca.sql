@@ -34,32 +34,32 @@ VALUES
 (19, 3, 'Miguel Silva Barros', '08:00:00', '18:00:00', '12:00:00', '14:00:00');
 
 INSERT INTO da_roca.OrdemServico (numeroOrdemServico, codigoVeiculo, tipoManutencao, criadaEm, tempoEstimado, status) VALUES
-(18199, 1, 'Manutenção preventiva', '2024-10-03 09:52:13', '01:30:00', 'APROG'),
-(20613, 3, 'Manutenção corretiva', '2024-10-03 11:13:13', '02:00:00', 'APROG'),
-(27931, 7, 'Manutenção corretiva', '2024-10-03 11:13:13', '02:00:00', 'APROG'),
-(28953, 9, 'Manutenção corretiva', '2024-10-03 11:13:13', '02:00:00', 'APROG'),
-(32705, 13, 'Manutenção corretiva', '2024-10-03 11:16:17', '02:00:00', 'APROG'),
-(24490, 17, 'Manutenção corretiva', '2024-10-03 11:16:17', '02:00:00', 'APROG'),
-(26858, 19, 'Manutenção corretiva', '2024-10-03 11:16:17', '02:00:00', 'APROG'),
-(13991, 11, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(36902, 20, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(28868, 52, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(23166, 23, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(26277, 60, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(23096, 61, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(35307, 48, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(27053, 73, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(23694, 91, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(30245, 89, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(14804, 94, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(29866, 98, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(16488, 31, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(17927, 37, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(22517, 45, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(29775, 34, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(39447, 39, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(12196, 57, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
-(25614, 51, 'Manutenção preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG');
+(18199, 1, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 09:52:13', '01:30:00', 'APROG'),
+(20613, 3, 'Manutenï¿½ï¿½o corretiva', '2024-10-03 11:13:13', '02:00:00', 'APROG'),
+(27931, 7, 'Manutenï¿½ï¿½o corretiva', '2024-10-03 11:13:13', '02:00:00', 'APROG'),
+(28953, 9, 'Manutenï¿½ï¿½o corretiva', '2024-10-03 11:13:13', '02:00:00', 'APROG'),
+(32705, 13, 'Manutenï¿½ï¿½o corretiva', '2024-10-03 11:16:17', '02:00:00', 'APROG'),
+(24490, 17, 'Manutenï¿½ï¿½o corretiva', '2024-10-03 11:16:17', '02:00:00', 'APROG'),
+(26858, 19, 'Manutenï¿½ï¿½o corretiva', '2024-10-03 11:16:17', '02:00:00', 'APROG'),
+(13991, 11, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(36902, 20, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(28868, 52, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(23166, 23, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(26277, 60, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(23096, 61, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(35307, 48, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(27053, 73, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(23694, 91, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(30245, 89, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(14804, 94, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(29866, 98, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(16488, 31, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(17927, 37, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(22517, 45, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(29775, 34, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(39447, 39, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(12196, 57, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG'),
+(25614, 51, 'Manutenï¿½ï¿½o preventiva', '2024-10-03 11:16:17', '01:00:00', 'APROG');
 
 INSERT INTO da_roca.Veiculo 
 (codigoVeiculo, codigoCentroDistribuicao, fabricante, modelo, ano, placa, velocidadeMedia) 
@@ -190,9 +190,9 @@ CREATE TABLE daroca.centrodistribuicao (
 );
 
 INSERT INTO da_roca.CentroDistribuicao (codigoCentroDistribuicao, nome, cidade, estado) VALUES
-(1, 'Centro de distribuição 3', 'Ribeirão Preto', 'São Paulo'),
-(2, 'Centro de distribuição 2', 'São Paulo', 'São Paulo'),
-(3, 'Centro de distribuição 1', 'Campinas', 'São Paulo');
+(1, 'Centro de distribuiï¿½ï¿½o 3', 'Ribeirï¿½o Preto', 'Sï¿½o Paulo'),
+(2, 'Centro de distribuiï¿½ï¿½o 2', 'Sï¿½o Paulo', 'Sï¿½o Paulo'),
+(3, 'Centro de distribuiï¿½ï¿½o 1', 'Campinas', 'Sï¿½o Paulo');
 
 
 CREATE TABLE daroca.usuarios (
@@ -206,10 +206,10 @@ INSERT INTO da_roca.Usuarios
 (codigoUsuario, nome, login, senha) 
 VALUES
 (1, 'Guilherme Macedo', 'gmacedo', 'paocomovo#15'),
-(2, 'Nathália Martins', 'nmartins', 'cazaVerde@13'),
-(3, 'Elisabeth Araújo', 'earaujo', 'fermento#56!'),
+(2, 'Nathï¿½lia Martins', 'nmartins', 'cazaVerde@13'),
+(3, 'Elisabeth Araï¿½jo', 'earaujo', 'fermento#56!'),
 (4, 'Fernando Gomide', 'fgomide', 'xpto12#$'),
-(5, 'Rodrigo Gonçalves', 'rgoncalves', 'mOntAnhA%12#13');
+(5, 'Rodrigo Gonï¿½alves', 'rgoncalves', 'mOntAnhA%12#13');
 
 
 --COMECA AQUI
@@ -245,10 +245,19 @@ CREATE TABLE da_roca.ordensservico (
 );
 
 CREATE TABLE da_roca.programacoes (
+    idProgramacao tinyint primary key,
     datas date,
     centro int,
     usuario varchar(20)
 )
+
+CREATE TABLE da_roca.horarios(
+    horario varchar(11),
+    duracao varchar(5),
+    tipo varchar(15),
+    idMecanico int,
+    idProgramacao tinyint foreign key references da_roca.programacoes(idProgramacao)
+);
 
 
 --exemplo de cadastrar programacao 
