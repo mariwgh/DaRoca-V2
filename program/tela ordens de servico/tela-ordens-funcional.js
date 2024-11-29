@@ -1,3 +1,14 @@
+window.addEventListener("load", () => {
+    setTimeout(() => {
+      const loadingScreen = document.getElementById("tela-carrega");
+      loadingScreen.style.display = "none";
+  
+      const content = document.getElementById("tela-principal");
+      content.style.display = "block";
+    }, 1500);
+});
+
+
 function BuscarOrdens() {
 
     let dataFiltrada = document.getElementById("dataFiltrado").value;

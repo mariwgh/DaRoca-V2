@@ -11,51 +11,59 @@
 </head>
 
 <body onload="BuscarVeiculos()">
-    <header>
-        <img src="../../documents/daroca logo.png" id="logo">
-    </header>
+    <div id="tela-carrega">
+        <img src="../../documents/simbolo carregando.png" alt="" id="imagem-carregando">
+        <p id="carregando">Carregando...</p>
+    </div>
 
-    <main>
-        <div id="filtros">
-            <b id="titleFilterVeic">Veículos</b>
 
-            <input type="number" id="dataFiltrado" placeholder="Ano" onchange="BuscarVeiculos()">
+    <div id="tela-principal" style="display: none;">
+        <header>
+            <img src="../../documents/daroca logo.png" id="logo">
+        </header>
 
-            <select name="" id="centroFiltrado" onchange="BuscarVeiculos()">
-                <option value="0">Centro de distribuição</option>
-                <option value="3">Campinas</option>
-                <option value="2">São Paulo</option>
-                <option value="1">Ribeirão Preto</option>
-            </select>
-        </div>
+        <main>
+            <div id="filtros">
+                <b id="titleFilterVeic">Veículos</b>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Código VeÍculo</th>
-                    <th>Centro de Distribuição</th>
-                    <th>Fabricante</th>
-                    <th>Modelo</th>
-                    <th>Ano</th>
-                    <th>Placa</th>
-                    <th>Velocidade Média</th>
-                </tr>
-            </thead>
-            
-            <tbody id="tabela">
-                <!-- <tr>
-                    <td>Exemplo</td>
-                    <td>Exemplo</td>
-                    <td>Exemplo</td>
-                </tr> -->
-            </tbody>    
-        </table>
-    </main>
+                <input type="number" id="dataFiltrado" placeholder="Ano" onchange="BuscarVeiculos()">
 
-    <footer>
-        <a href="../tela principal/tela-principal.html"><button id="butaoVeiculosMec">Voltar</button></a>
-    </footer>
-    
+                <select name="" id="centroFiltrado" onchange="BuscarVeiculos()">
+                    <option value="0">Centro de distribuição</option>
+                    <option value="3">Campinas</option>
+                    <option value="2">São Paulo</option>
+                    <option value="1">Ribeirão Preto</option>
+                </select>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código VeÍculo</th>
+                        <th>Centro de Distribuição</th>
+                        <th>Fabricante</th>
+                        <th>Modelo</th>
+                        <th>Ano</th>
+                        <th>Placa</th>
+                        <th>Velocidade Média</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="tabela">
+                    <!-- <tr>
+                        <td>Exemplo</td>
+                        <td>Exemplo</td>
+                        <td>Exemplo</td>
+                    </tr> -->
+                </tbody>    
+            </table>
+        </main>
+
+        <footer>
+            <a href="../tela principal/tela-principal.html"><button id="butaoVeiculosMec">Voltar</button></a>
+        </footer>
+    </div>
+
     <script src="tela-filtros-veiculos-funcional.js"></script>
 </body>
 

@@ -11,24 +11,32 @@
 </head>
 
 <body onload="buscaMecanico()">
-    <header>
-        <img src="../../documents/daroca logo.png" id="logo">
-    </header>
-
-    <div id="filtros">
-        <select name="" id="centroFiltrado"  onchange="buscaMecanico()">
-            <option value="0" disabled selected>Centro de distribuição</option>
-            <option value="3">Campinas</option>
-            <option value="2">São Paulo</option>
-            <option value="1">Ribeirão Preto</option>
-        </select>
+    <div id="tela-carrega">
+        <img src="../../documents/simbolo carregando.png" alt="" id="imagem-carregando">
+        <p id="carregando">Carregando...</p>
     </div>
 
-    <div id="mecanico"></div>
 
-    <footer>
-        <a href="../tela filtros mecanicos/tela-filtros-mecanicos.html"><button id="butaoVeiculosMec">Voltar</button></a>
-    </footer>
+    <div id="tela-principal" style="display: none;">
+        <header>
+            <img src="../../documents/daroca logo.png" id="logo">
+        </header>
+
+        <div id="filtros">
+            <select name="" id="centroFiltrado"  onchange="buscaMecanico()">
+                <option value="0" disabled selected>Centro de distribuição</option>
+                <option value="3">Campinas</option>
+                <option value="2">São Paulo</option>
+                <option value="1">Ribeirão Preto</option>
+            </select>
+        </div>
+
+        <div id="mecanico"></div>
+
+        <footer>
+            <a href="../tela filtros mecanicos/tela-filtros-mecanicos.html"><button id="butaoVeiculosMec">Voltar</button></a>
+        </footer>
+    </div>
     
     <script src="tela-do-mecanico-funcional.js"></script>
 </body>

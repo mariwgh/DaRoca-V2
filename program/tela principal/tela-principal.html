@@ -11,47 +11,54 @@
 </head>
 
 <body onload="MostrarOrdens()">
-    <header>
-        <img src="../../documents/daroca logo.png" id="logo">
-    </header>
+    <div id="tela-carrega">
+        <img src="../../documents/simbolo carregando.png" alt="" id="imagem-carregando">
+        <p id="carregando">Carregando...</p>
+    </div>
 
-    <main>
-        <div id="filtros" onchange="FiltroCentro()">
-            <input type="date" id="dataFiltrado">
 
-            <select name="" id="centroFiltrado">
-                <option value="0" disabled selected>Centro de distribuição</option>
-                <option value="3">Campinas</option>
-                <option value="2">São Paulo</option>
-                <option value="1">Ribeirão Preto</option>
-            </select>
-        </div>
+    <div id="tela-principal" style="display: none;">
+        <header>
+            <img src="../../documents/daroca logo.png" id="logo">
+        </header>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Centro de Distribuição</th>
-                    <th>Usuário</th>
-                </tr>
-            </thead>
-            
-            <tbody id="tabela">
-                <!-- <tr>
-                    <td>Exemplo</td>
-                    <td>Exemplo</td>
-                    <td>Exemplo</td>
-                </tr> -->
-            </tbody>    
-        </table>
-    </main>
+        <main>
+            <div id="filtros" onchange="FiltroCentro()">
+                <input type="date" id="dataFiltrado">
 
-    <footer>
-        <a href="../tela filtros veiculos/tela-filtros-veiculos.html"><button id="butaoVeiculosMec">Veículos</button></a>
-        <a href="../tela filtros mecanicos/tela-filtros-mecanicos.html"><button id="butaoVeiculosMec">Mecânicos</button></a>
-        <a href="../tela cadastrar programacao/tela-cadastra-prog.html"><button id="butaoAdd"><img src="https://cdn-icons-png.flaticon.com/512/7794/7794550.png" id="imgMais"></button></a>
-    </footer>
-    
+                <select name="" id="centroFiltrado">
+                    <option value="0" disabled selected>Centro de distribuição</option>
+                    <option value="3">Campinas</option>
+                    <option value="2">São Paulo</option>
+                    <option value="1">Ribeirão Preto</option>
+                </select>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Centro de Distribuição</th>
+                        <th>Usuário</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="tabela">
+                    <!-- <tr>
+                        <td>Exemplo</td>
+                        <td>Exemplo</td>
+                        <td>Exemplo</td>
+                    </tr> -->
+                </tbody>    
+            </table>
+        </main>
+
+        <footer>
+            <a href="../tela filtros veiculos/tela-filtros-veiculos.html"><button id="butaoVeiculosMec">Veículos</button></a>
+            <a href="../tela filtros mecanicos/tela-filtros-mecanicos.html"><button id="butaoVeiculosMec">Mecânicos</button></a>
+            <a href="../tela cadastrar programacao/tela-cadastra-prog.html"><button id="butaoAdd"><img src="https://cdn-icons-png.flaticon.com/512/7794/7794550.png" id="imgMais"></button></a>
+        </footer>
+    </div>
 
     <script src="tela-principal-funcional.js"></script>
 </body>

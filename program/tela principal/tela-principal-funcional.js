@@ -1,3 +1,14 @@
+window.addEventListener("load", () => {
+    setTimeout(() => {
+      const loadingScreen = document.getElementById("tela-carrega");
+      loadingScreen.style.display = "none";
+  
+      const content = document.getElementById("tela-principal");
+      content.style.display = "block";
+    }, 1500); // 1500 ms = 1,5 segundos
+});
+
+
 function MostrarOrdens() {
     let espaco = document.getElementById("tabela");
     espaco.innerHTML = ""; 

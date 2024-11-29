@@ -11,23 +11,31 @@
 </head>
 
 <body>
-    <div class="login-container">
-        <h2>Programação</h2>
-        
-        <form>
-            <label for="data">Data:</label>
-            <input type="date" id="input-data" name="Data" required placeholder="Digite a data (dd/mm/aa)"><br>
+    <div id="tela-carrega">
+        <img src="../../documents/simbolo carregando.png" alt="" id="imagem-carregando">
+        <p id="carregando">Carregando...</p>
+    </div>
+
+
+    <div id="tela-principal" style="display: none;">
+        <div class="login-container">
+            <h2>Programação</h2>
             
-            <label for="centro-distribuicao">Centro de Distribuição:</label>
-            <select id="input-centro" name="Centro de distribuição" required>
-                <option value="" disabled selected>Selecione um centro</option>
-                <option value="3">Campinas</option>
-                <option value="2">São Paulo</option>
-                <option value="1">Ribeirão Preto</option>
-            </select><br>
-            
-            <input type="submit" value="Entrar" id="input-entrar">
-        </form>
+            <form>
+                <label for="data">Data:</label>
+                <input type="date" id="input-data" name="Data" required placeholder="Digite a data (dd/mm/aa)"><br>
+                
+                <label for="centro-distribuicao">Centro de Distribuição:</label>
+                <select id="input-centro" name="Centro de distribuição" required>
+                    <option value="" disabled selected>Selecione um centro</option>
+                    <option value="3">Campinas</option>
+                    <option value="2">São Paulo</option>
+                    <option value="1">Ribeirão Preto</option>
+                </select><br>
+                
+                <input type="submit" value="Entrar" id="input-entrar">
+            </form>
+        </div>
     </div>
 
     <script src="tela-de-cadastra-prog-funcional.js"></script>
