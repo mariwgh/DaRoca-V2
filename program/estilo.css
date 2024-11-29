@@ -16,8 +16,9 @@ body {
 }
 
 #logo {
-    width: 5%;
+    width: 6%;
     margin-left: 15px;
+    object-fit: contain;
 }
 
 header {
