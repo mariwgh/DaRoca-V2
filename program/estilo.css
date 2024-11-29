@@ -230,3 +230,30 @@ h2{
     background-color: #00614f;
     color: white;
 }
+
+
+#controlePaginas {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#butonAnterior {
+    padding: 12px;
+    border: 1.5px solid black;
+    border-radius: 40px;
+    /* sombra do button */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+#paginaAtual {
+    color: white;
+}
+
+#butonProxima {
+    padding: 12px;
+    border: 1.5px solid black;
+    border-radius: 40px;
+    /* sombra do button */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
+}
