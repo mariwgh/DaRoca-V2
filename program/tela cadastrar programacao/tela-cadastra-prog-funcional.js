@@ -19,12 +19,12 @@ function cadastrarProg(event) {
 
     let espaco = document.getElementById("message");
 
-    const dados = require("./tela-de-login-funcional.js")
+    const login = require("./tela-de-login-funcional.js")
 
     let dados = {
         datas: dataRequerido,
         centro: centroRequerida,
-        usuario: dados[login]
+        usuario: login[login]
     }
 
     fetch("https://", {
