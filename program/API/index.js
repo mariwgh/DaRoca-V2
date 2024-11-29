@@ -31,16 +31,7 @@ async function execQuery(querySQL) {
 
 app.get("/horarios", async (req, res) => {
     try {
-        let result = await execQuery(`SELECT * FROM da_roca.horarios`);
-        res.json(result);
-    } catch (erro) {
-        console.error('Erro ao buscar os dados do banco:', erro);
-    }
-});
-
-app.get("/programacoes", async (req, res) => {
-    try {
-        let result = await execQuery(`SELECT * FROM da_roca.programacoes`);
+        let result = await execQuery(`SELECT * FROM da_roca.Horarios`);
         res.json(result);
     } catch (erro) {
         console.error('Erro ao buscar os dados do banco:', erro);
