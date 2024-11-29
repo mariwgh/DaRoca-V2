@@ -1,7 +1,6 @@
-const feito = []
-var ind = 0
-
 function buscaMecanico(pagina = 1) {    
+    const feito = []
+    var ind = 0
 
     let centroRequerido = document.getElementById("centroFiltrado").value;
 
