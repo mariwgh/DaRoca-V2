@@ -11,21 +11,19 @@
 </head>
 
 <body>
-    <header>
-        <img src="../../documents/daroca logo.png" id="logo" alt="Logo">
-    </header>
-
     <div class="login-container">
         <h2>Login</h2>
         
-        <form>
-            <label for="usuario">Usuário:</label>
-            <input type="text" id="input-usuario" name="Usuario" required placeholder="Digite seu usuário"><br>
+        <form onsubmit="realizarLogin(event)">
+            <label>Usuário:</label>
+            <input type="text" id="input-usuario" required placeholder="Digite seu usuário"><br>
             
-            <label for="Senha">Senha:</label>
-            <input type="password" id="input-senha" name="Senha" required placeholder="Digite sua senha"><br>
+            <label>Senha:</label>
+            <input type="password" id="input-senha" required placeholder="Digite sua senha"><br>
             
             <input type="submit" value="Entrar" id="input-entrar">
+
+            <label id="message"></label>
         </form>
     </div>
 

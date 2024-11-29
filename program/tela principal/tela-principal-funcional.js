@@ -1,7 +1,47 @@
+window.addEventListener("load", () => {
+    setTimeout(() => {
+      const loadingScreen = document.getElementById("tela-carrega");
+      loadingScreen.style.display = "none";
+  
+      const content = document.getElementById("tela-principal");
+      content.style.display = "block";
+    }, 1500); // 1500 ms = 1,5 segundos
+});
+
+
+function MostrarOrdens() {
+    let espaco = document.getElementById("tabela");
+    espaco.innerHTML = ""; 
+
+    // buscar ordens de serviço
+    fetch("https://cenoura.glitch.me/ordensservico")
+        .then(response => response.json())
+        .then(ordens => { 
+            ordens.forEach(ordem => {
+                if (ordem.codigoCentroDistribuicao == "1") {
+                    muni = "Ribeirão Preto"
+                }
+                else if (ordem.codigoCentroDistribuicao == "2") {
+                    muni = "São Paulo"
+                }
+                else if (ordem.codigoCentroDistribuicao == "3") {
+                    muni = "Campinas"
+                }
+
+                espaco.innerHTML += "<tr>" + 
+                                        "<td>" + ordem.criadaEm + "</td>" +
+                                        "<td>" + ordem.codigoCentroDistribuicao + " - " + muni + "</td>" +
+                                        "<td id='nomeMecAllign'>Exemplo</td>" +
+                                    "</tr>";
+                });
+        })
+}
+
 function FiltroCentro() {
     
     let centroRequerido = document.getElementById("centroFiltrado").value;
     let dataRequerido = document.getElementById("dataFiltrado").value;
+  
     let espaco = document.getElementById("tabela");
     espaco.innerHTML = ""; 
 
@@ -13,48 +53,49 @@ function FiltroCentro() {
             fetch("https://cenoura.glitch.me/ordensservico")
                 .then(response => response.json())
                 .then(ordens => {
-                    let ordensFiltradas = [];
+                    let ordensFiltradas = ordens;
 
-                    // filtrar as ordens de acordo com o centro e veículo, se estiver selecionado
-                    if (centroRequerido) {
-                        veiculos.forEach(veiculo => {
-                            if (veiculo.codigoCentroDistribuicao == centroRequerido) {
-                                // ordens associadas a esse veículo
-                                let ordensDoVeiculo = ordens.filter(ordem => ordem.codigoVeiculo == veiculo.codigoVeiculo);
-                                ordensFiltradas.push(...ordensDoVeiculo);
-                            }
+                    // filtrar as ordens de acordo com o centro e data, se ambos forem fornecidos
+                    if (centroRequerido != 0 && dataRequerido) {
+                        ordensFiltradas = ordensFiltradas.filter(ordem => {
+                            let veiculoCorrespondente = veiculos.find(veiculo => veiculo.codigoVeiculo == ordem.codigoVeiculo);
+                            let dataOrdem = ordem.criadaEm.split('T')[0];
+                            // filtra as ordens se o centro e a data corresponderem
+                            return veiculoCorrespondente && 
+                                   veiculoCorrespondente.codigoCentroDistribuicao == centroRequerido && 
+                                   dataOrdem === dataRequerido;
                         });
-                    } else {
-                        // se nenhum centro foi especificado, mostrar todas as ordens de todos os veículos
-                        ordensFiltradas = ordens;
-                    }
-
-                    // se o filtro de data foi especificado
-                    if (dataRequerido) {
+                    } else if (dataRequerido) {
+                        // caso só a data seja fornecida
                         ordensFiltradas = ordensFiltradas.filter(ordem => {
                             let dataOrdem = ordem.criadaEm.split('T')[0];
-                            // comparar se a data da ordem é igual à data filtrada
                             return dataOrdem === dataRequerido;
                         });
-                    }
+                    } else if (centroRequerido != 0) {
+                        // caso só o centro seja fornecido
+                        ordensFiltradas = ordensFiltradas.filter(ordem => {
+                            let veiculoCorrespondente = veiculos.find(veiculo => veiculo.codigoVeiculo == ordem.codigoVeiculo);
+                            return veiculoCorrespondente && veiculoCorrespondente.codigoCentroDistribuicao == centroRequerido;
+                        });
+                    } 
 
                     // exibir as ordens na tabela
                     if (ordensFiltradas.length > 0) {
                         ordensFiltradas.forEach(ordem => {
-                            let veiculoCorrespondente = veiculos.find(veiculo => veiculo.codigoVeiculo == ordem.codigoVeiculo);
-
-                            let centroDistribuicao;
-
-                            if (veiculoCorrespondente) {
-                                centroDistribuicao = veiculoCorrespondente.codigoCentroDistribuicao;
-                            } else {
-                                centroDistribuicao = "Centro não encontrado";
+                            if (ordem.codigoCentroDistribuicao == "1") {
+                                muni = "Ribeirão Preto"
+                            }
+                            else if (ordem.codigoCentroDistribuicao == "2") {
+                                muni = "São Paulo"
+                            }
+                            else if (ordem.codigoCentroDistribuicao == "3") {
+                                muni = "Campinas"
                             }
 
                             espaco.innerHTML += "<tr>" + 
                                                     "<td>" + ordem.criadaEm + "</td>" +
-                                                    "<td>" + centroDistribuicao + "</td>" +
-                                                    "<td>Exemplo</td>" +
+                                                    "<td>" + ordem.codigoCentroDistribuicao + " - " + muni + "</td>" +
+                                                    "<td id='nomeMecAllign'>Exemplo</td>" +
                                                 "</tr>";
                         });
                     } else {

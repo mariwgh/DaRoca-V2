@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecânico</title>
+    <link rel="stylesheet" href="../estilo.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Questrial&display=swap" rel="stylesheet">
+</head>
+
+<body onload="buscaMecanico()">
+    <header>
+        <img src="../../documents/daroca logo.png" id="logo">
+        <a href="../tela filtros mecanicos/tela-filtros-mecanicos.html"><button id="butaoVeiculosMec">Voltar</button></a>
+    </header>
+
+    <div id="filtros">
+        <select name="" id="centroFiltrado"  onchange="buscaMecanico()">
+            <option value="0" disabled selected>Centro de distribuição</option>
+            <option value="3">Campinas</option>
+            <option value="2">São Paulo</option>
+            <option value="1">Ribeirão Preto</option>
+        </select>
+    </div>
+
+    <div id="mecanico"></div>
+    
+    <script src="tela-do-mecanico-nova-funcional.js"></script>
+</body>
+</html>

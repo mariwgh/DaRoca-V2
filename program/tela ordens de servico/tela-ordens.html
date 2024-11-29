@@ -11,43 +11,48 @@
 </head>
 
 <body onload="BuscarOrdens()">
-    <header>
-        <img src="../../documents/daroca logo.png" id="logo">
-    </header>
+    <div id="tela-carrega">
+        <img src="../../documents/simbolo carregando.png" alt="" id="imagem-carregando">
+        <p id="carregando">Carregando...</p>
+    </div>
 
-    <main>
-        <div id="filtros">
-            <b id="titleFilterVeic">Ordens de serviço</b>
 
-            <input type="date" id="dataFiltrado" onchange="BuscarOrdens()">
+    <div id="tela-principal" style="display: none;">
+        <header>
+            <img src="../../documents/daroca logo.png" id="logo">
+            <a href="../tela principal/tela-principal.html"><button id="butaoVeiculosMec">Voltar</button></a>
+        </header>
 
-            <input type="number" id="duracaoFiltrado" onchange="BuscarOrdens()" placeholder="Duração">
-        </div>
+        <main>
+            <div id="filtros">
+                <b id="titleFilterVeic">Ordens de serviço</b>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Ordem de serviço</th>
-                    <th>Data</th>
-                    <th>Centro de Distribuição</th>
-                    <th>Duração</th>
-                    <th>Selecionar</th>
-                </tr>
-            </thead>
-            
-            <tbody id="tabela">
-                <!-- <tr>
-                    <td>Exemplo</td>
-                    <td>Exemplo</td>
-                    <td>Exemplo</td>
-                </tr> -->
-            </tbody>    
-        </table>
-    </main>
+                <input type="date" id="dataFiltrado" onchange="BuscarOrdens()">
 
-    <footer>
-        <a href="../tela de progresso/tela-progresso.html"><button id="butaoVeiculosMec">Gerar</button></a>
-    </footer>
+                <input type="number" id="duracaoFiltrado" onchange="BuscarOrdens()" placeholder="Duração">
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ordem de serviço</th>
+                        <th>Data</th>
+                        <th>Centro de Distribuição</th>
+                        <th>Duração</th>
+                        <th>Selecionar</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="tabela">
+                    <!-- <tr>
+                        <td>Exemplo</td>
+                        <td>Exemplo</td>
+                        <td>Exemplo</td>
+                    </tr> -->
+                </tbody>    
+            </table>
+        </main>
+    </div>
     
     <script src="tela-ordens-funcional.js"></script>
 </body>
