@@ -244,22 +244,6 @@ CREATE TABLE da_roca.ordensservico (
     status VARCHAR(10)
 );
 
-CREATE TABLE da_roca.programacoes (
-    idProgramacao tinyint primary key,
-    datas date,
-    centro int,
-    usuario varchar(20)
-)
-
-CREATE TABLE da_roca.horarios(
-    horario varchar(11),
-    duracao varchar(5),
-    tipo varchar(15),
-    idMecanico int,
-    idProgramacao tinyint foreign key references da_roca.programacoes(idProgramacao)
-);
-
-
 --exemplo de cadastrar programacao 
 --(so sera ultilizada quando clicar no botao, diferente das outrras, n e cache):
 /*

@@ -38,6 +38,14 @@ app.get("/horarios", async (req, res) => {
     }
 });
 
+app.get("/programacoes", async (req, res) => {
+    try {
+        let result = await execQuery(`SELECT * FROM da_roca.programacoes`);
+        res.json(result);
+    } catch (erro) {
+        console.error('Erro ao buscar os dados do banco:', erro);
+    }
+});
 
 // executa uma consulta SQL no banco de dados, é usada nas rotas
 async function execQuery(querySQL) {

@@ -23,6 +23,8 @@ body {
 header {
     background-color: #FFFBE4;
     height: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 main {
@@ -74,14 +76,15 @@ footer {
     height: 40px; 
 }
 
-
 /* tela principal/programacoes */
 
-footer button {
+header button {
     background-color: #FFFBE4;
     border: none; 
-    margin: 0 45px;
+    margin: 45 0px;
     cursor: pointer;
+    margin-top: 22.5px;
+    margin-bottom: 22.5px;
 }
 
 #butaoVeiculosMec {
